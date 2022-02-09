@@ -1,7 +1,21 @@
 import Head from "next/head";
-import React from "react";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
 
+let heightWidthClass = ``;
 const Header = () => {
+  const [hideHeader, setHideHeader] = useState(true);
+
+  const handleHamClick = () => {
+    setHideHeader((prevValue) => !!!prevValue);
+  };
+
+  const handleHeaderClose = () => {
+    setHideHeader(() => true);
+  };
+
+  const hamIconSizeClasses = `w-10 h-10`;
+
   return (
     <>
       <Head>
@@ -10,7 +24,60 @@ const Header = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header></header>
+      <button
+        className={`menu-icon-container ${hamIconSizeClasses} overflow-hidden m-4 fixed z-[9999999]`}
+        type="button"
+        onClick={handleHamClick}
+      >
+        <div
+          className={`icon-ham-menu-cross relative ${hamIconSizeClasses} transition-transform ${
+            hideHeader ? "-translate-y-full" : ""
+          }`}
+        >
+          <Image
+            src="/icon-ham-menu-cross.svg"
+            layout="fill"
+            alt="ham menu cross icon"
+          />
+        </div>
+        <div
+          className={`icon-ham-menu relative ${hamIconSizeClasses} transition-transform ${
+            hideHeader ? "-translate-y-full" : ""
+          }`}
+        >
+          <Image src="/icon-ham-menu.svg" layout="fill" alt="ham menu icon" />
+        </div>
+      </button>
+
+      <header
+        className={`min-h-screen fixed inset-0 z-[999999] transition-all ${
+          hideHeader ? "-translate-y-full opacity-0" : "opacity-100"
+        }`}
+      >
+        <nav className="font-laila font-semibold text-3xl h-screen text-custom-white-extra-light grid text-center space-y-3 place-content-center">
+          <a
+            onClick={handleHeaderClose}
+            className=""
+            href="#home"
+          >
+            Home
+          </a>
+          <a
+            onClick={handleHeaderClose}
+            className=""
+            href="#works"
+          >
+            My Works
+          </a>
+          <a
+            onClick={handleHeaderClose}
+            className=""
+            href="#contact"
+          >
+            Contact me
+          </a>
+        </nav>
+      </header>
     </>
   );
 };

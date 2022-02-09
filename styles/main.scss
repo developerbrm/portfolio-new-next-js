@@ -1,8 +1,27 @@
+/* fonts -------- */
+@import url("https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 
 @layer components {
-  
+  header {
+    background: linear-gradient(
+      168.37deg,
+      #14213d -5.64%,
+      #1d2249 16.61%,
+      #3d1564 39.06%,
+      #3a1a5d 57.94%,
+      #241c45 88.8%,
+      #14213d 102.96%
+    );
+  }
 }
 
 @tailwind utilities;
+
+@layer utilities {
+  a {
+    @apply active:border-b-2 active:border-b-custom-white-light hover:border-b-2 hover:border-b-custom-white-light mx-auto;
+  }
+}
