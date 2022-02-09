@@ -14,7 +14,7 @@ const Header = () => {
     setHideHeader(() => true);
   };
 
-  const hamIconSizeClasses = `w-10 h-10`;
+  const hamIconSizeClasses = `w-7 h-7`;
 
   return (
     <>
@@ -55,25 +55,13 @@ const Header = () => {
         }`}
       >
         <nav className="font-laila font-semibold text-3xl h-screen text-custom-white-extra-light grid text-center space-y-3 place-content-center">
-          <a
-            onClick={handleHeaderClose}
-            className=""
-            href="#home"
-          >
+          <a onClick={handleHeaderClose} className="" href="#hero">
             Home
           </a>
-          <a
-            onClick={handleHeaderClose}
-            className=""
-            href="#works"
-          >
+          <a onClick={handleHeaderClose} className="" href="#works">
             My Works
           </a>
-          <a
-            onClick={handleHeaderClose}
-            className=""
-            href="#contact"
-          >
+          <a onClick={handleHeaderClose} className="" href="#contact">
             Contact me
           </a>
         </nav>

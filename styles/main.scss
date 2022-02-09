@@ -2,9 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @tailwind components;
 
 @layer components {
+  .btn {
+    @apply rounded-xl bg-custom-white-extra-light text-custom-dark-blue font-bold transition-all px-6 py-2 w-full text-center text-xl relative overflow-hidden z-0 after:absolute after:bg-custom-dark-blue after:w-0 after:inset-0 after:rounded-xl after:-z-10 after:ease-in-out after:duration-[.4s];
+  }
+
   header {
     background: linear-gradient(
       168.37deg,
@@ -16,12 +27,27 @@
       #14213d 102.96%
     );
   }
+
+  #hero {
+    background: linear-gradient(
+      168.57deg,
+      #0e172a -4.04%,
+      #1c1a38 23.23%,
+      #2a143d 49.13%,
+      #25183a 74.09%,
+      #0b1323 104.1%
+    );
+  }
 }
 
 @tailwind utilities;
 
 @layer utilities {
-  a {
+  a:not(.btn) {
     @apply active:border-b-2 active:border-b-custom-white-light hover:border-b-2 hover:border-b-custom-white-light mx-auto;
+  }
+
+  .btn {
+    @apply hover:text-custom-white-extra-light hover:after:w-full;
   }
 }
