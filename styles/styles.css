@@ -583,6 +583,10 @@ header {
   height: 5rem;
 }
 
+.h-11{
+  height: 2.75rem;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -595,9 +599,30 @@ header {
   width: 5rem;
 }
 
+.w-full{
+  width: 100%;
+}
+
+.w-11{
+  width: 2.75rem;
+}
+
 .-translate-y-full{
   --tw-translate-y: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-8{
+  --tw-translate-y: -2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.grid-flow-col{
+  grid-auto-flow: column;
+}
+
+.grid-rows-\[1fr_auto\]{
+  grid-template-rows: 1fr auto;
 }
 
 .place-content-center{
@@ -624,6 +649,15 @@ header {
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.bg-custom-dark-blue{
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 33 61 / var(--tw-bg-opacity));
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .px-5{
@@ -690,18 +724,18 @@ header {
   transition-duration: 150ms;
 }
 
-a:not(.btn){
+a:not(.btn, .social-icons){
   margin-left: auto;
   margin-right: auto;
 }
 
-a:not(.btn):hover{
+a:not(.btn, .social-icons):hover{
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
   border-bottom-color: rgb(229 229 229 / var(--tw-border-opacity));
 }
 
-a:not(.btn):active{
+a:not(.btn, .social-icons):active{
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
   border-bottom-color: rgb(229 229 229 / var(--tw-border-opacity));

@@ -43,7 +43,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  a:not(.btn) {
+  a:not(.btn, .social-icons) {
     @apply active:border-b-2 active:border-b-custom-white-light hover:border-b-2 hover:border-b-custom-white-light mx-auto;
   }
 

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import SocialIcons from "./common/SocialIcons";
 
 let heightWidthClass = ``;
 const Header = () => {
@@ -50,11 +51,11 @@ const Header = () => {
       </button>
 
       <header
-        className={`min-h-screen fixed inset-0 z-[999999] transition-all ${
+        className={`min-h-screen fixed inset-0 z-[999999] transition-all grid text-center place-content-center grid-rows-[1fr_auto] ${
           hideHeader ? "-translate-y-full opacity-0" : "opacity-100"
         }`}
       >
-        <nav className="font-laila font-semibold text-3xl h-screen text-custom-white-extra-light grid text-center space-y-3 place-content-center">
+        <nav className="font-laila font-semibold text-3xl text-custom-white-extra-light grid space-y-3 place-content-center">
           <a onClick={handleHeaderClose} className="" href="#hero">
             Home
           </a>
@@ -62,9 +63,12 @@ const Header = () => {
             My Works
           </a>
           <a onClick={handleHeaderClose} className="" href="#contact">
-            Contact me
+            Contact Me
           </a>
         </nav>
+        <div className="-translate-y-8">
+          <SocialIcons />
+        </div>
       </header>
     </>
   );
