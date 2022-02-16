@@ -26,7 +26,7 @@ const Header = () => {
       </Head>
 
       <button
-        className={`menu-icon-container ${hamIconSizeClasses} overflow-hidden m-4 fixed z-[9999999]`}
+        className={`menu-icon-container ${hamIconSizeClasses} fixed z-[9999999] m-4 overflow-hidden`}
         type="button"
         onClick={handleHamClick}
       >
@@ -51,11 +51,11 @@ const Header = () => {
       </button>
 
       <header
-        className={`min-h-screen fixed inset-0 z-[999999] transition-all grid text-center place-content-center grid-rows-[1fr_auto] ${
+        className={`fixed inset-0 z-[999999] grid min-h-screen grid-rows-[1fr_auto] place-content-center text-center transition-all ${
           hideHeader ? "-translate-y-full opacity-0" : "opacity-100"
         }`}
       >
-        <nav className="font-laila font-semibold text-3xl text-custom-white-extra-light grid space-y-3 place-content-center">
+        <nav className="font-laila text-custom-white-extra-light grid place-content-center space-y-3 text-3xl font-semibold">
           <a onClick={handleHeaderClose} className="" href="#hero">
             Home
           </a>

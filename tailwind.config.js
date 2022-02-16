@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
   theme: {
@@ -13,6 +15,7 @@ module.exports = {
       quicksand: ["Quicksand", "sans-serif"],
     },
     colors: {
+      ...colors,
       "custom-white-extra-light": "#F9F9F9",
       "custom-white-light": "#E5E5E5",
       "custom-yellow": "#FCA311",
