@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Contact from "./common/Contact";
+import Works from "./common/Works";
 
 const Main = () => {
   return (
@@ -24,6 +25,8 @@ const Main = () => {
           My Works
         </a>
       </section>
+
+      <Works />
 
       <Contact />
     </main>

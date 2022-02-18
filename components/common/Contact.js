@@ -33,14 +33,14 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" title="Contact Me" className="bg-slate-100">
+    <section id="contact" title="Contact Me" className="bg-blue-50">
       <h2 className="py-8 text-center font-laila text-4xl font-bold text-custom-dark-blue">
         Contact Me
       </h2>
 
       <form
         name="contact-form"
-        className="w-full space-y-5 bg-slate-50 p-5  text-slate-800"
+        className="w-full space-y-5  p-5  text-slate-800"
         onSubmit={handleFormSubmit}
       >
         <label title="Name" className="block">
