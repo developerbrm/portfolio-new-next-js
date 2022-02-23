@@ -5,7 +5,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth
+    @apply scroll-smooth;
   }
 }
 
@@ -13,7 +13,7 @@
 
 @layer components {
   .btn {
-    @apply rounded-xl bg-custom-white-extra-light text-custom-dark-blue font-bold transition-all px-6 py-2 w-full text-center text-xl relative overflow-hidden z-0 after:absolute after:bg-custom-dark-blue after:w-0 after:inset-0 after:rounded-xl after:-z-10 after:ease-in-out after:duration-[.4s];
+    @apply relative z-0 w-full overflow-hidden rounded-xl bg-custom-white-extra-light px-6 py-2 text-center text-xl font-bold text-custom-dark-blue transition-all after:absolute after:inset-0 after:-z-10 after:w-0 after:rounded-xl after:bg-custom-dark-blue after:duration-[.4s] after:ease-in-out;
   }
 
   header {
@@ -44,7 +44,7 @@
 
 @layer utilities {
   a:not(.btn, .social-icons) {
-    @apply active:border-b-2 active:border-b-custom-white-light hover:border-b-2 hover:border-b-custom-white-light mx-auto;
+    @apply mx-auto hover:border-b-2 hover:border-b-custom-white-light active:border-b-2 active:border-b-custom-white-light;
   }
 
   .btn {
